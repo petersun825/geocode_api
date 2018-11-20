@@ -59,7 +59,7 @@ def get_location(location):
 @app.route("/return_locations", methods=["GET"])
 def return_locations():
 	return jsonify({"locations": locations})
-
+#main
 if __name__ == "__main__":
 	app.run(debug=True)
 
