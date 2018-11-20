@@ -60,7 +60,7 @@ def get_location(location):
 def return_locations():
 	return jsonify({"locations": locations})
 
-
+#added a comment
 #main 
 if __name__ == "__main__":
 	app.run(debug=True)
