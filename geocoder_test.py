@@ -20,26 +20,13 @@ class address():
 		#convert latitude & longtitude into str and encapsulate with () 
 		return "({0},{1})".format(lat,lng)
 
-
-
-	# def write_header(self):
-	# 	with open ('locations.csv', 'w') as csvfile:
-	# 	fieldnames=['location', 'latitude', 'longtitude']
-	# 	writer= csv.DictWriter(csvfile, fieldnames=fieldnames)
-	# 	#header
-	# 	writer.writeheader()
-
-	# def write_location(self):
-	# 	writer.writerow({'location': self.location, 'latitude': self.lat, 'longtitude': self.lng})
-
-
 @app.route("/")
 def index():
 	pass
 	
 @app.route("/add_location/<location>", methods=["POST"])
 def add_location(location):
-	#I don't know why this needs to exist?
+	
 	data = request.get_json()
 
 	#instantiate the class address with input of location, then assign to latlng
